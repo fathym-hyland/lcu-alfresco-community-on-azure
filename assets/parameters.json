@@ -1,7 +1,7 @@
 {
-  "RESOURCE_NAME": {
-    "type": "input",
-    "message": "The name of the Azure resources to create:"
+  "AZURE_CLOUD_LOOKUP": {
+    "type": "eac:env:clouds:list|select",
+    "message": "The name of the Azure cloud connection to use:"
   },
   "RESOURCE_NAME": {
     "type": "input",
