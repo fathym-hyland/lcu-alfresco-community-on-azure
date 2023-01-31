@@ -1,0 +1,10 @@
+{
+  "RESOURCE_NAME": {
+    "type": "input",
+    "message": "The name of the Azure resources to create:"
+  },
+  "RESOURCE_NAME": {
+    "type": "input",
+    "message": "The name of the Azure resources to create:"
+  }
+}
