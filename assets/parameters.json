@@ -1,9 +1,9 @@
 {
   "AZURE_CLOUD_LOOKUP": {
-    "type": "cloudselect"
+    "type": "eac:env:clouds|select"
   },
   "RESOURCE_NAME": {
-    "type": "input",
-    "message": "The name of the Azure resources to create:"
+    "type": "eac:env:clouds:groups|select",
+    "optional": true
   }
 }
