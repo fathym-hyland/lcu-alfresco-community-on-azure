@@ -1,7 +1,8 @@
 {
   "AZURE_CLOUD_LOOKUP": {
     "type": "cloudselect",
-    "message": "The name of the Azure cloud connection to use:"
+    "message": "The name of the Azure cloud connection to use:",
+    "choices": ["choice1"]
   },
   "RESOURCE_NAME": {
     "type": "input",
