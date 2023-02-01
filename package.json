@@ -1,6 +1,6 @@
 {
   "name": "@fathym-hyland/lcu-alfresco-community-on-azure",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "@fathym-hyland/lcu-alfresco-community-on-azure",
   "author": "Fathym, Inc",
   "main": "lcu.json",
