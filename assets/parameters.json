@@ -1,6 +1,6 @@
 {
   "AZURE_CLOUD_LOOKUP": {
-    "type": "eac:env:clouds:list|select",
+    "type": "cloudselect",
     "message": "The name of the Azure cloud connection to use:"
   },
   "RESOURCE_NAME": {
