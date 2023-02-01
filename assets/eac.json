@@ -134,6 +134,7 @@
               "Name": "{{RESOURCE_NAME}}",
               "Description": "{{RESOURCE_NAME}}",
               "Details": {
+                "Type": "Format",
                 "Template": {
                   "Parameters": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/alfresco-community-by-bitnami/parameters.json",
                   "Content": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/alfresco-community-by-bitnami/template.json"
