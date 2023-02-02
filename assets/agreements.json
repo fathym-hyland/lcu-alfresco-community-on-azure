@@ -4,6 +4,6 @@
     "publisher": "bitnami",
     "offer": "alfrescocommunity",
     "sku": "201602",
-    "version": null
+    "version": "latest"
   }
 }
