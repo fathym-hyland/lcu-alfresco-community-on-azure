@@ -8,5 +8,6 @@
     "SuccessType": "Project"
   },
   "EaC": "./assets/eac.json",
-  "Parameters": "./assets/parameters.json"
+  "Parameters": "./assets/parameters.json",
+  "Agreements": "./assets/agreements.json"
 }

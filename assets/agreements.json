@@ -1,0 +1,9 @@
+{
+  "Alfresco Community by Bitnami": {
+    "type": "az",
+    "publisher": "bitnami",
+    "offer": "alfrescocommunity",
+    "sku": "201602",
+    "version": null
+  }
+}
