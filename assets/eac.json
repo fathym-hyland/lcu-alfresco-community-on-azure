@@ -140,7 +140,8 @@
                   "Content": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/alfresco-community-by-bitnami/template.json"
                 },
                 "Data": {
-                  "RESOURCE_NAME": "{{RESOURCE_NAME}}"
+                  "RESOURCE_NAME": "{{RESOURCE_NAME}}",
+                  "SSH_PUBLIC_KEY": "{{SSH_PUBLIC_KEY}}"
                 }
               }
             }
