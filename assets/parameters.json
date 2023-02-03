@@ -15,6 +15,6 @@
   ],
   "SSH_PUBLIC_KEY": {
     "type": "az:sshkey:create|confirm",
-    "RESOURCE_NAME": "resGroup"
+    "RESOURCE_NAME": "resourceGroup"
   }
 }
