@@ -6,8 +6,5 @@
     "Image": "https://www.fathym.com/img/hyland-alfresco-500x275.png",
     "PreviewImage": "https://www.fathym.com/img/alfresco-logo.png",
     "SuccessType": "Project"
-  },
-  "EaC": "./assets/eac.json",
-  "Parameters": "./assets/parameters.json",
-  "Agreements": "./assets/agreements.json"
+  }
 }

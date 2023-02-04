@@ -2,20 +2,22 @@
   "Applications": {
     "$1": {
       "Application": {
-        "Description": "Alfresco API",
-        "Name": "Alfresco API"
+        "Description": "Custom application fork of @fathym-it/hyland-homepage-gatsby@main to deploy Fathym Hyland Landing Page",
+        "Name": "Fathym Hyland Landing Page"
       },
       "LookupConfig": {
-        "PathRegex": "/alfresco.*"
+        "PathRegex": "/.*"
       },
       "LowCodeUnit": {
-        "APIRoot": "https://{{RESOURCE_NAME}}.azurewebsites.net",
-        "Security": "~",
-        "Type": "API"
+        "SourceControlLookup": "fork|github://fathym-it/hyland-homepage-gatsby",
+        "Build": "latest",
+        "Path": "lcu-github-plasmic-artifacts-release.yml",
+        "Type": "GitHub"
       },
       "Processor": {
-        "InboundPath": "/alfresco",
-        "Type": "Proxy"
+        "BaseHref": "/",
+        "DefaultFile": "index.html",
+        "Type": "DFS"
       }
     },
     "$2": {
@@ -38,43 +40,6 @@
       }
     },
     "$3": {
-      "Application": {
-        "Description": "Custom application fork of @fathym-it/hyland-homepage-gatsby@main to deploy Fathym Hyland Landing Page",
-        "Name": "Fathym Hyland Landing Page"
-      },
-      "LookupConfig": {
-        "PathRegex": "/.*"
-      },
-      "LowCodeUnit": {
-        "SourceControlLookup": "fork|github://fathym-it/hyland-homepage-gatsby",
-        "Build": "latest",
-        "Path": "lcu-github-plasmic-artifacts-release.yml",
-        "Type": "GitHub"
-      },
-      "Processor": {
-        "BaseHref": "/",
-        "DefaultFile": "index.html",
-        "Type": "DFS"
-      }
-    },
-    "$4": {
-      "Application": {
-        "Description": "Alfresco Admin",
-        "Name": "Alfresco Admin"
-      },
-      "LookupConfig": {
-        "PathRegex": "/admin/alfresco.*"
-      },
-      "LowCodeUnit": {
-        "SPARoot": "https://{{RESOURCE_NAME}}.azurewebsites.net",
-        "Type": "SPA"
-      },
-      "Processor": {
-        "InboundPath": "admin/alfresco",
-        "Type": "Proxy"
-      }
-    },
-    "$5": {
       "Application": {
         "Description": "Hyland Flow Storybook",
         "Name": "Hyland Flow Storybook"
@@ -136,12 +101,11 @@
               "Details": {
                 "Type": "Format",
                 "Template": {
-                  "Parameters": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/alfresco-community-by-bitnami/parameters.json",
-                  "Content": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/alfresco-community-by-bitnami/template.json"
+                  "Parameters": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/base/empty/parameters.json",
+                  "Content": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/base/empty/template.json"
                 },
                 "Data": {
-                  "RESOURCE_NAME": "{{RESOURCE_NAME}}",
-                  "SSH_PUBLIC_KEY": "{{SSH_PUBLIC_KEY}}"
+                  "RESOURCE_NAME": "{{RESOURCE_NAME}}"
                 }
               }
             }
