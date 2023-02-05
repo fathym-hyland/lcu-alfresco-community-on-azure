@@ -16,6 +16,9 @@
                 "Data": {
                   "RESOURCE_NAME": "{{RESOURCE_NAME}}",
                   "SSH_PUBLIC_KEY": "{{SSH_PUBLIC_KEY}}"
+                },
+                "Outputs": {
+                  "publicIpAddress1": "PUBLIC_IP_ADDRESS_1"
                 }
               }
             }
