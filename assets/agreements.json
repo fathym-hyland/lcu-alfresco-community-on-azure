@@ -1,5 +1,5 @@
 {
-  "bitnami:alfrescocommunity:201602": {
+  "az:bitnami:alfrescocommunity:201602": {
     "Name": "Alfresco Community by Bitnami",
     "type": "az",
     "publisher": "bitnami",
