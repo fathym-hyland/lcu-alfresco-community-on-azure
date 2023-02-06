@@ -97,17 +97,7 @@
           "ResourceGroups": {
             "{{RESOURCE_NAME}}": {
               "Name": "{{RESOURCE_NAME}}",
-              "Description": "{{RESOURCE_NAME}}",
-              "Details": {
-                "Type": "Format",
-                "Template": {
-                  "Parameters": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/base/empty/parameters.json",
-                  "Content": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/base/empty/template.json"
-                },
-                "Data": {
-                  "RESOURCE_NAME": "{{RESOURCE_NAME}}"
-                }
-              }
+              "Description": "{{RESOURCE_NAME}}"
             }
           }
         }
