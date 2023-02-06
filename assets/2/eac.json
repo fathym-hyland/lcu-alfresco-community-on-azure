@@ -10,8 +10,8 @@
               "Details": {
                 "Type": "Format",
                 "Template": {
-                  "Parameters": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/bitnami/alfresco-community-by-bitnami/parameters.json",
-                  "Content": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/bitnami/alfresco-community-by-bitnami/template.json"
+                  "Parameters": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/bitnami/alfresco-community-on-azure/parameters.json",
+                  "Content": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/bitnami/alfresco-community-on-azure/template.json"
                 },
                 "Data": {
                   "RESOURCE_NAME": "{{RESOURCE_NAME}}",
