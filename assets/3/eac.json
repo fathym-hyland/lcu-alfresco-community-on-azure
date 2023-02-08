@@ -1,6 +1,6 @@
 {
   "Applications": {
-    "$1": {
+    "alfresco-api": {
       "Application": {
         "Description": "Alfresco API",
         "Name": "Alfresco API"
@@ -9,7 +9,7 @@
         "PathRegex": "/alfresco.*"
       },
       "LowCodeUnit": {
-        "APIRoot": "https://{{PUBLIC_IP_ADDRESS_1.value}}",
+        "APIRoot": "https://{{PUBLIC_IP_ADDRESS_1}}",
         "Security": "~",
         "Type": "API"
       },
@@ -18,7 +18,7 @@
         "Type": "Proxy"
       }
     },
-    "$2": {
+    "alfresco-admin": {
       "Application": {
         "Description": "Alfresco Admin",
         "Name": "Alfresco Admin"
@@ -27,7 +27,7 @@
         "PathRegex": "/admin/alfresco.*"
       },
       "LowCodeUnit": {
-        "SPARoot": "https://{{PUBLIC_IP_ADDRESS_1.value}}",
+        "SPARoot": "https://{{PUBLIC_IP_ADDRESS_1}}",
         "Type": "SPA"
       },
       "Processor": {

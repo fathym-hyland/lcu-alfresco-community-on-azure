@@ -1,6 +1,6 @@
 {
   "Applications": {
-    "$1": {
+    "hyland-homepage-gatsby": {
       "Application": {
         "Description": "Custom application fork of @fathym-it/hyland-homepage-gatsby@main to deploy Fathym Hyland Landing Page",
         "Name": "Fathym Hyland Landing Page"
@@ -20,7 +20,7 @@
         "Type": "DFS"
       }
     },
-    "$2": {
+    "alfresco-adf-default": {
       "Application": {
         "Description": "Alfresco ADF Default",
         "Name": "Alfresco ADF Default"
@@ -39,7 +39,7 @@
         "Type": "DFS"
       }
     },
-    "$3": {
+    "hyland-flow-storybook": {
       "Application": {
         "Description": "Hyland Flow Storybook",
         "Name": "Hyland Flow Storybook"
