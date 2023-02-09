@@ -24,7 +24,7 @@
         "Name": "Alfresco Admin"
       },
       "LookupConfig": {
-        "PathRegex": "/"
+        "PathRegex": "/.*"
       },
       "LowCodeUnit": {
         "SPARoot": "http//{{PUBLIC_IP_ADDRESS_1}}",
