@@ -31,7 +31,7 @@
         "Type": "SPA"
       },
       "Processor": {
-        "InboundPath": "admin/alfresco",
+        "InboundPath": "",
         "Type": "Proxy"
       }
     }
