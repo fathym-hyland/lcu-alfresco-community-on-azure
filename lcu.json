@@ -5,5 +5,16 @@
     "Image": "https://www.fathym.com/img/hyland-alfresco-500x275.png",
     "PreviewImage": "https://www.fathym.com/img/alfresco-logo.png",
     "UsesGit": true
+  },
+  "Phases": {
+    "1": {
+      "Name": "Configure Resource Group"
+    },
+    "2": {
+      "Name": "Setup Alfresco Community"
+    },
+    "3": {
+      "Name": "configure Alfresco Proxies"
+    }
   }
 }

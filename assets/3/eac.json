@@ -27,7 +27,7 @@
         "PathRegex": "/.*"
       },
       "LowCodeUnit": {
-        "SPARoot": "http//{{PUBLIC_IP_ADDRESS_1}}",
+        "SPARoot": "http://{{PUBLIC_IP_ADDRESS_1}}",
         "Type": "SPA"
       },
       "Processor": {
