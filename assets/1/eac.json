@@ -1,25 +1,5 @@
 {
   "Applications": {
-    "hyland-homepage-gatsby": {
-      "Application": {
-        "Description": "Custom application fork of @fathym-it/hyland-homepage-gatsby@main to deploy Fathym Hyland Landing Page",
-        "Name": "Fathym Hyland Landing Page"
-      },
-      "LookupConfig": {
-        "PathRegex": "/.*"
-      },
-      "LowCodeUnit": {
-        "SourceControlLookup": "fork|github://fathym-it/hyland-homepage-gatsby",
-        "Build": "latest",
-        "Path": "lcu-github-plasmic-artifacts-release.yml",
-        "Type": "GitHub"
-      },
-      "Processor": {
-        "BaseHref": "/",
-        "DefaultFile": "index.html",
-        "Type": "DFS"
-      }
-    },
     "alfresco-adf-default": {
       "Application": {
         "Description": "Alfresco ADF Default",
@@ -61,37 +41,6 @@
   },
   "Environments": {
     "$#.PrimaryEnvironment": {
-      "Artifacts": {
-        "plasmic-build-release": {
-          "Name": "Plasmic Build/Release",
-          "Output": "./public",
-          "Type": "GitHub",
-          "BuildCommand": "npm run build",
-          "InstallCommand": "npm i",
-          "NPMRegistry": "https://registry.npmjs.org/"
-        }
-      },
-      "DevOpsActions": {
-        "github-artifacts-release-plasmic": {
-          "Name": "GitHub Artifacts - Release - Plasmic",
-          "Path": "lcu-github-plasmic-artifacts-release.yml",
-          "ArtifactLookups": ["plasmic-build-release"],
-          "Templates": [
-            "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/plasmic-artifacts/_header.hbs.yml",
-            "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/plasmic-artifacts/release-flow.yml"
-          ]
-        }
-      },
-      "Sources": {
-        "fork|github://fathym-it/hyland-homepage-gatsby": {
-          "DevOpsActionTriggerLookups": ["github-artifacts-release-plasmic"],
-          "Branches": ["main"],
-          "MainBranch": "main",
-          "Organization": "fathym-it",
-          "Repository": "hyland-homepage-gatsby",
-          "Type": "GitHub"
-        }
-      },
       "Clouds": {
         "{{AZURE_CLOUD_LOOKUP}}": {
           "ResourceGroups": {
