@@ -9,7 +9,7 @@
         "PathRegex": "/alfresco.*"
       },
       "LowCodeUnit": {
-        "APIRoot": "https://{{PUBLIC_IP_ADDRESS_1}}",
+        "APIRoot": "http://{{PUBLIC_IP_ADDRESS_1}}",
         "Security": "~",
         "Type": "API"
       },
@@ -27,7 +27,7 @@
         "PathRegex": "/admin/alfresco.*"
       },
       "LowCodeUnit": {
-        "SPARoot": "https://{{PUBLIC_IP_ADDRESS_1}}",
+        "SPARoot": "http//{{PUBLIC_IP_ADDRESS_1}}",
         "Type": "SPA"
       },
       "Processor": {
