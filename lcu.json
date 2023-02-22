@@ -3,8 +3,7 @@
     "Name": "Alfresco Community on Azure with Bitnami",
     "Description": "A modular frontend example for Alfresco Community, with new Alfresco instance deployed on Azure.",
     "Image": "https://www.fathym.com/img/hyland-alfresco-500x275.png",
-    "PreviewImage": "https://www.fathym.com/img/alfresco-logo.png",
-    "UsesGit": true
+    "PreviewImage": "https://www.fathym.com/img/alfresco-logo.png"
   },
   "Phases": {
     "1": {
