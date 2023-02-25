@@ -57,8 +57,8 @@
           "Name": "Angular Build/Release",
           "Output": "./dist",
           "Type": "GitHub",
-          "BuildCommand": "npm run build",
-          "InstallCommand": "npm ci",
+          "BuildCommand": "yarn build",
+          "InstallCommand": "yarn install --frozen-lockfile",
           "NPMRegistry": "https://registry.npmjs.org/"
         }
       },
