@@ -11,7 +11,7 @@
       "LowCodeUnit": {
         "SourceControlLookup": "fork|github://fathym-hyland/alfresco-default",
         "Build": "latest",
-        "Path": "lcu-github-artifacts-release.yml",
+        "Path": "lcu-release.yml",
         "Type": "GitHub"
       },
       "Processor": {
@@ -65,7 +65,7 @@
       "DevOpsActions": {
         "github-artifacts-release-angular": {
           "Name": "GitHub Artifacts - Release - Angular",
-          "Path": "lcu-github-artifacts-release.yml",
+          "Path": "lcu-release.yml",
           "ArtifactLookups": ["angular-build-release"],
           "Templates": [
             "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/_header.hbs.yml",
