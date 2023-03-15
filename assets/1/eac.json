@@ -11,7 +11,7 @@
       "LowCodeUnit": {
         "SourceControlLookup": "fork|github://fathym-hyland/alfresco-default",
         "Build": "latest",
-        "Path": "lcu-github-artifacts-release.yml",
+        "Path": "lcu-release.yml",
         "Type": "GitHub"
       },
       "Processor": {
@@ -57,15 +57,15 @@
           "Name": "Angular Build/Release",
           "Output": "./dist",
           "Type": "GitHub",
-          "BuildCommand": "npm run build",
-          "InstallCommand": "npm ci",
+          "BuildCommand": "yarn build",
+          "InstallCommand": "yarn install --frozen-lockfile",
           "NPMRegistry": "https://registry.npmjs.org/"
         }
       },
       "DevOpsActions": {
         "github-artifacts-release-angular": {
           "Name": "GitHub Artifacts - Release - Angular",
-          "Path": "lcu-github-artifacts-release.yml",
+          "Path": "lcu-release.yml",
           "ArtifactLookups": ["angular-build-release"],
           "Templates": [
             "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/_header.hbs.yml",
