@@ -35,5 +35,12 @@
         "Type": "Proxy"
       }
     }
+  },
+  "Environments": {
+    "$#.PrimaryEnvironment": {
+      "Clouds": {
+        "{{AZURE_CLOUD_LOOKUP}}": {}
+      }
+    }
   }
 }
