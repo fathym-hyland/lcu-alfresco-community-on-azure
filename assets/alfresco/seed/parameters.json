@@ -1,19 +1,34 @@
 {
-  "AZURE_CLOUD_LOOKUP": [
-    {
-      "Type": "eac:env:clouds|select"
-    }
-  ],
-  "PROJECT_LOOKUP": [
-    {
-      "Type": "eac:projects|select"
-    }
-  ],
-  "ORGANIZATION": [
-    {
-      "Type": "git:organizations|select"
-    }
-  ],
+  "PROJECT_LOOKUP": {
+    "Order": 1,
+    "Prompts": [
+      {
+        "Type": "eac:projects|select",
+        "Message": "Choose the project to deploy the Alfresco Starter to?",
+        "Arguments": {
+          "CreateText": "Create a project"
+        }
+      }
+    ]
+  },
+  "ORGANIZATION": {
+    "Order": 2,
+    "Prompts": [
+      {
+        "Type": "git:organizations|select",
+        "Message": "Which organization would you like to fork code into?"
+      }
+    ]
+  },
+  "AZURE_CLOUD_LOOKUP": {
+    "Order": 2,
+    "Prompts": [
+      {
+        "Type": "eac:env:clouds|select",
+        "Message": "Which cloud would you like to deploy into?"
+      }
+    ]
+  },
   "RESOURCE_NAME": [
     {
       "Type": "eac:env:clouds:groups|select",
