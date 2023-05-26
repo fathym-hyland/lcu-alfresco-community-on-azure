@@ -21,27 +21,21 @@
     ]
   },
   "AZURE_CLOUD_LOOKUP": {
-    "Order": 2,
+    "Order": 3,
     "Prompts": [
       {
-        "Type": "eac:env:clouds|select",
-        "Message": "Which cloud would you like to deploy into?"
+        "Type": "eac:env:clouds:groups|select",
+        "Message": "Enter a name for your alfresco cloud resources"
       }
     ]
   },
-  "RESOURCE_NAME": [
-    {
-      "Type": "eac:env:clouds:groups|select",
-      "Optional": true,
-      "Arguments": {
-        "AZURE_CLOUD_LOOKUP": "cloudLookup"
+  "RESOURCE_NAME": {
+    "Order": 4,
+    "Prompts": [
+      {
+        "Type": "input",
+        "Message": "Enter a name for your alfresco resource group"
       }
-    },
-    {
-      "Type": "input",
-      "Arguments": {
-        "message": "Enter a name for your alfresco cloud resources"
-      }
-    }
-  ]
+    ]
+  }
 }
