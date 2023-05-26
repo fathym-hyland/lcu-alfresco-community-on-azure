@@ -1,0 +1,100 @@
+{
+  "Applications": {
+    "{{$1}}-alfresco-adf-default": {
+      "Details": {
+        "Description": "Alfresco ADF Default",
+        "Name": "Alfresco ADF Default"
+      },
+      "LookupConfig": {
+        "PathRegex": "/dashboard.*"
+      },
+      "Package": {
+        "Details": {
+          "Package": "@fathym-hyland/alfresco-default",
+          "Version": "latest"
+        },
+        "Type": "NPMLowCodeUnit"
+      },
+      "Processor": {
+        "Details": {
+          "BaseHref": "/dashboard/",
+          "DefaultFile": "index.html"
+        },
+        "Type": "DFSProcessor"
+      }
+    },
+    "{{$2}}-hyland-flow-storybook": {
+      "Details": {
+        "Description": "Hyland Flow Storybook",
+        "Name": "Hyland Flow Storybook"
+      },
+      "LookupConfig": {
+        "PathRegex": "/qa/storybooks/hyland-flow.*"
+      },
+      "Package": {
+        "Details": {
+          "Package": "@fathym-hyland/hyland-flow-storybook",
+          "Version": "latest"
+        },
+        "Type": "NPMLowCodeUnit"
+      },
+      "Processor": {
+        "Details": {
+          "BaseHref": "/qa/storybooks/hyland-flow/",
+          "DefaultFile": "index.html"
+        },
+        "Type": "DFSProcessor"
+      }
+    }
+  },
+  "Environments": {
+    "{{EaC.PrimaryEnvironment}}": {
+      "Artifacts": {
+        "angular-build-release": {
+          "Type": "GitHubArtifact",
+          "Details": {
+            "Name": "Angular Build/Release",
+            "Output": "./dist",
+            "BuildCommand": "yarn build",
+            "InstallCommand": "yarn install --frozen-lockfile",
+            "NPMRegistry": "https://registry.npmjs.org/"
+          }
+        }
+      },
+      "DevOpsActions": {
+        "github-artifacts-release-angular": {
+          "ArtifactLookups": ["angular-build-release"],
+          "Details": {
+            "Name": "GitHub Artifacts - Release - Angular",
+            "Path": "lcu-release.yml",
+            "Templates": [
+              "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/_header.hbs.yml",
+              "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/release-flow.yml"
+            ]
+          }
+        }
+      },
+      "Sources": {
+        "fork|github://fathym-hyland/alfresco-default": {
+          "DevOpsActionTriggerLookups": ["github-artifacts-release-angular"],
+          "Details": {
+            "Branches": ["main"],
+            "MainBranch": "main",
+            "Organization": "{{ORGANIZATION}}",
+            "Repository": "alfresco-default",
+            "Name": "github://{{ORGANIZATION}}/alfresco-default"
+          },
+          "Type": "GitHubSourceControl"
+        }
+      }
+    }
+  },
+  "Projects": {
+    "{{PROJECT_LOOKUP}}": {
+      "ApplicationLookups": [
+        "{{$1}}-alfresco-adf-default",
+        "{{$2}}-hyland-flow-storybook"
+      ]
+    }
+  }
+}
