@@ -13,17 +13,17 @@
         {
           "Name": "Configure Resource Group",
           "Order": 1,
-          "Asset": "alfresco"
+          "Asset": "seed"
         },
         {
           "Name": "Setup Alfresco Community",
           "Order": 2,
-          "Asset": "alfresco"
+          "Asset": "setup-community"
         },
         {
           "Name": "Configure Alfresco Proxies",
           "Order": 3,
-          "Asset": "alfresco"
+          "Asset": "configure-proxies"
         }
       ]
     }
