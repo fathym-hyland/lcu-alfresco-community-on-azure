@@ -24,7 +24,7 @@
     "Order": 3,
     "Prompts": [
       {
-        "Type": "eac:env:clouds:groups|select",
+        "Type": "eac:env:clouds|select",
         "Message": "Enter a name for your alfresco cloud resources"
       }
     ]
@@ -34,7 +34,7 @@
     "Prompts": [
       {
         "Type": "input",
-        "Message": "Enter a name for your alfresco resource group"
+        "Message": "Enter a name for your alfresco resources"
       }
     ]
   }

@@ -1,0 +1,130 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "westus3"
+    },
+    "networkInterfaceName1": {
+      "value": "{{RESOURCE_NAME}}-z1"
+    },
+    "networkSecurityGroupName": {
+      "value": "{{RESOURCE_NAME}}-nsg"
+    },
+    "networkSecurityGroupRules": {
+      "value": [
+        {
+          "name": "HTTP",
+          "properties": {
+            "priority": 1010,
+            "protocol": "TCP",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceApplicationSecurityGroups": [],
+            "destinationApplicationSecurityGroups": [],
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "80"
+          }
+        },
+        {
+          "name": "HTTPS",
+          "properties": {
+            "priority": 1020,
+            "protocol": "TCP",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceApplicationSecurityGroups": [],
+            "destinationApplicationSecurityGroups": [],
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "443"
+          }
+        },
+        {
+          "name": "SSH",
+          "properties": {
+            "priority": 1030,
+            "protocol": "TCP",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceApplicationSecurityGroups": [],
+            "destinationApplicationSecurityGroups": [],
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "22"
+          }
+        }
+      ]
+    },
+    "subnetName": {
+      "value": "default"
+    },
+    "virtualNetworkName": {
+      "value": "{{RESOURCE_NAME}}-vnet"
+    },
+    "addressPrefixes": {
+      "value": [
+        "10.0.0.0/16"
+      ]
+    },
+    "subnets": {
+      "value": [
+        {
+          "name": "default",
+          "properties": {
+            "addressPrefix": "10.0.0.0/24"
+          }
+        }
+      ]
+    },
+    "publicIpAddressName1": {
+      "value": "{{RESOURCE_NAME}}-z1-ip"
+    },
+    "publicIpAddressType": {
+      "value": "Static"
+    },
+    "publicIpAddressSku": {
+      "value": "Standard"
+    },
+    "pipDeleteOption": {
+      "value": "Detach"
+    },
+    "virtualMachineRG": {
+      "value": "{{RESOURCE_NAME}}"
+    },
+    "virtualMachineName": {
+      "value": "{{RESOURCE_NAME}}-1"
+    },
+    "virtualMachineName1": {
+      "value": "{{RESOURCE_NAME}}-1"
+    },
+    "virtualMachineComputerName1": {
+      "value": "{{RESOURCE_NAME}}-1"
+    },
+    "osDiskType": {
+      "value": "Premium_LRS"
+    },
+    "osDiskDeleteOption": {
+      "value": "Delete"
+    },
+    "virtualMachineSize": {
+      "value": "Standard_B2s"
+    },
+    "nicDeleteOption": {
+      "value": "Detach"
+    },
+    "adminUsername": {
+      "value": "azureuser"
+    },
+    "adminPublicKey": {
+      "value": "{{SSH_PUBLIC_KEY}}"
+    },
+    "zone": {
+      "value": "1"
+    }
+  }
+}

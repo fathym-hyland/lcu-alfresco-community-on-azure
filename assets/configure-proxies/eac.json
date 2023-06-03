@@ -1,6 +1,6 @@
 {
   "Applications": {
-    "{{$1}}-alfresco-api": {
+    "{{PROJECT_LOOKUP}}-alfresco-api": {
       "Details": {
         "Description": "Alfresco API",
         "Name": "Alfresco API"
@@ -22,7 +22,7 @@
         "Type": "ProxyProcessor"
       }
     },
-    "{{$2}}-alfresco-admin": {
+    "{{PROJECT_LOOKUP}}-alfresco-admin": {
       "Details": {
         "Description": "Alfresco Admin",
         "Name": "Alfresco Admin"
@@ -45,10 +45,18 @@
     }
   },
   "Environments": {
-    "$#.PrimaryEnvironment": {
+    "{{EaC.PrimaryEnvironment}}": {
       "Clouds": {
         "{{AZURE_CLOUD_LOOKUP}}": {}
       }
+    }
+  },
+  "Projects": {
+    "{{PROJECT_LOOKUP}}": {
+      "ApplicationLookups": [
+        "{{PROJECT_LOOKUP}}-alfresco-api",
+        "{{PROJECT_LOOKUP}}-alfresco-admin"
+      ]
     }
   }
 }

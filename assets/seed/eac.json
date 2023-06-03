@@ -1,6 +1,6 @@
 {
   "Applications": {
-    "{{$1}}-alfresco-adf-default": {
+    "{{PROJECT_LOOKUP}}-alfresco-adf-default": {
       "Details": {
         "Description": "Alfresco ADF Default",
         "Name": "Alfresco ADF Default"
@@ -23,7 +23,7 @@
         "Type": "DFSProcessor"
       }
     },
-    "{{$2}}-hyland-flow-storybook": {
+    "{{PROJECT_LOOKUP}}-hyland-flow-storybook": {
       "Details": {
         "Description": "Hyland Flow Storybook",
         "Name": "Hyland Flow Storybook"
@@ -63,7 +63,9 @@
       },
       "DevOpsActions": {
         "github-artifacts-release-angular": {
-          "ArtifactLookups": ["angular-build-release"],
+          "ArtifactLookups": [
+            "angular-build-release"
+          ],
           "Details": {
             "Name": "GitHub Artifacts - Release - Angular",
             "Path": "lcu-release.yml",
@@ -76,9 +78,13 @@
       },
       "Sources": {
         "fork|github://fathym-hyland/alfresco-default": {
-          "DevOpsActionTriggerLookups": ["github-artifacts-release-angular"],
+          "DevOpsActionTriggerLookups": [
+            "github-artifacts-release-angular"
+          ],
           "Details": {
-            "Branches": ["main"],
+            "Branches": [
+              "main"
+            ],
             "MainBranch": "main",
             "Organization": "{{ORGANIZATION}}",
             "Repository": "alfresco-default",
@@ -92,8 +98,8 @@
   "Projects": {
     "{{PROJECT_LOOKUP}}": {
       "ApplicationLookups": [
-        "{{$1}}-alfresco-adf-default",
-        "{{$2}}-hyland-flow-storybook"
+        "{{PROJECT_LOOKUP}}-alfresco-adf-default",
+        "{{PROJECT_LOOKUP}}-hyland-flow-storybook"
       ]
     }
   }
