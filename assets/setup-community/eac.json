@@ -10,8 +10,8 @@
               "Details": {
                 "Type": "Format",
                 "Template": {
-                  "Parameters": "./templates/bitnami/azure/parameters.json",
-                  "Content": "./templates/bitnami/azure/template.json"
+                  "Parameters": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/bitnami/alfresco-community-on-azure/parameters.json",
+                  "Content": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/bitnami/alfresco-community-on-azure/template.json"
                 },
                 "Data": {
                   "RESOURCE_NAME": "{{RESOURCE_NAME}}",
