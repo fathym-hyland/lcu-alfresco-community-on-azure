@@ -1,7 +1,7 @@
 {
   "Package": {
     "Name": "Alfresco Community on Azure with Bitnami",
-    "Description": "A modular frontend example for Alfresco Community, with new Alfresco instance deployed on Azure.",
+    "Description": "An Alfresco Community instance deployed to Azure. Integrated with the Alfresco portal and an Angular app starting point for development with Alfresco Application Development Framework (ADF).",
     "Image": "https://www.fathym.com/img/hyland-alfresco-500x275.png",
     "PreviewImage": "https://www.fathym.com/img/alfresco-logo.png",
     "Intents": [
@@ -18,20 +18,20 @@
   "Configurations": {
     "Full": {
       "Name": "Alfresco Community on Azure with Bitnami",
-      "Description": "A modular frontend example for Alfresco Community, with new Alfresco instance deployed on Azure.",
+      "Description": "An Alfresco Community instance deployed to Azure. Integrated with the Alfresco portal and an Angular app starting point for development with Alfresco Application Development Framework (ADF).",
       "Phases": [
         {
-          "Name": "Configure Resource Group",
+          "Name": "Configuring Azure Resource Group",
           "Order": 1,
           "Asset": "seed"
         },
         {
-          "Name": "Setup Alfresco Community",
+          "Name": "Setting up Alfresco Community",
           "Order": 2,
           "Asset": "setup-community"
         },
         {
-          "Name": "Configure Alfresco Proxies",
+          "Name": "Configuring Alfresco Proxies",
           "Order": 3,
           "Asset": "configure-proxies"
         }

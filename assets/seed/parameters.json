@@ -4,7 +4,7 @@
     "Prompts": [
       {
         "Type": "eac:projects|select",
-        "Message": "Choose the project to deploy the Alfresco Starter to?",
+        "Message": "Choose the project to deploy the Alfresco Community on Azure to?",
         "Arguments": {
           "CreateText": "Create a project"
         }
@@ -25,7 +25,7 @@
     "Prompts": [
       {
         "Type": "eac:env:clouds|select",
-        "Message": "Enter a name for your alfresco cloud resources"
+        "Message": "Enter a name for your Alfresco cloud resources"
       }
     ]
   },
@@ -34,7 +34,7 @@
     "Prompts": [
       {
         "Type": "input",
-        "Message": "Enter a name for your alfresco resources"
+        "Message": "Enter a name for your Alfresco resources"
       }
     ]
   }

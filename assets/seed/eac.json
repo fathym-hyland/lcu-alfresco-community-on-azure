@@ -97,6 +97,10 @@
   },
   "Projects": {
     "{{PROJECT_LOOKUP}}": {
+      "Details": {
+        "Name": "{{#if (lookup EaC.Projects PROJECT_LOOKUP)}}{{#if Details.Name}}{{Details.Name}}{{/if}}{{else}}Alfresco Community on Azure with Bitnami{{/if}}",
+        "Description": "{{#if (lookup EaC.Projects PROJECT_LOOKUP)}}{{#if Details.Description}}{{Details.Description}}{{/if}}{{else}}An Alfresco Community instance deployed to Azure. Integrated with the Alfresco portal and an Angular app starting point for development with Alfresco Application Development Framework (ADF).{{/if}}"
+      },
       "ApplicationLookups": [
         "{{PROJECT_LOOKUP}}-alfresco-adf-default",
         "{{PROJECT_LOOKUP}}-hyland-flow-storybook"
